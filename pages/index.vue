@@ -1,0 +1,15 @@
+<template>
+  <div>
+   <Home/>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  name: 'IndexPage',
+  head:{
+    title:'Agrosanzt, soluciones en jardinería'
+  }
+})
+</script>
