@@ -1,6 +1,10 @@
 <template>
   <div>
    <Home/>
+   <Info/>
+   <Banner/>
+   <Services/>
+   <Contact/>
   </div>
 </template>
 
@@ -8,8 +12,5 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'IndexPage',
-  head:{
-    title:'Agrosanzt, soluciones en jardinería'
-  }
 })
 </script>

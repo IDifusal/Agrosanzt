@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma"),
+     url(~assets/Axiforma/Axiforma-Regular.otf);
+     font-weight: 400;
+}
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma"),
+     url(~assets/Axiforma/Axiforma-Thin.otf);
+     font-weight: 300;
+}
+@font-face {
+    font-family: "Axiforma";
+    src: local("Axiforma"),
+     url(~assets/Axiforma/Axiforma-ExtraBold.otf);
+     font-weight: 700;
+}
+
+html {
+    font-family: "Axiforma","Open Sans",sans-serif;
+    color:#2d2d2d;
+    scroll-behavior: smooth;
+}
+h2,h1{
+    font-size: 32px;
+    color:#006400;
+}
+h3{
+    color: #007200;
+    font-size: 18px;
+}
+p{
+    font-weight: 400;
+}
+.text-white{
+    color:#ffffff
+}

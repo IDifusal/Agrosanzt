@@ -1,10 +1,15 @@
 <template>
-    <div class="app">
+  <div class="app">
+    <nav-bar />
     <Nuxt />
-    </div>
+    <Bottom/>
+  </div>
 </template>
 <script>
+import NavBar from '~/components/NavBar.vue'
+import Bottom from '~/components/Bottom.vue'
 export default {
-    name:'app'
+  components: { NavBar,Bottom },
+  name: 'app',
 }
 </script>
