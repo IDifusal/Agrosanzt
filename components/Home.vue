@@ -33,7 +33,6 @@ export default {
 <style lang="scss" scoped>
 .carousel-wrapper {
   width: 100%;
-  background: red;
   .swiper-slide {
     display: flex;
     flex-direction: column;
