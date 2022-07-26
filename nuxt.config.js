@@ -15,6 +15,11 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/fav-icon-agrosanzt.png' }],
+    script:[
+      {
+        src:'./plugins/ga.js'
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -45,7 +50,7 @@ export default {
     '@nuxtjs/google-analytics'
   ],
   googleAnalytics: {
-    id: 'UA-32440798-8',
+    id: 'G-MCC5K7735M',
     debug:true
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
