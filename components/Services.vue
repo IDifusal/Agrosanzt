@@ -1,20 +1,25 @@
 <template>
-    <section id="servicios" class="products py-20 container m-auto text-center">
-      <h2 class="font-bold">Servicios</h2>
-      <p>Sunt in amet ex veniam et exercitation ea pariatur enim non consequat Lorem sit in.</p>
-      <div class="grid grid-cols-1 md:grid-cols-4">
-        <div
-          v-for="(item, index) in products"
-          :key="index"
-          class="products__item"
-        >
-          <div class="products__item mt-5 p-5">
-            <h2 class="text-2xl font-bold">{{ item.title }}</h2>
-            <p class="mt-3">{{ item.description }}</p>
-          </div>
+  <section id="servicios" class="products py-20 container m-auto text-center">
+    <h2 class="font-bold">Servicios</h2>
+    <p>
+      Para ofrecer un servicio de calidad contamos con un equipo calificado y un
+      compromiso firme con la ecología.
+    </p>
+    <div class="">
+      <div
+        v-for="(item, index) in products"
+        :key="index"
+        class="products__item flex"
+        :class="(index + 1) % 2 == 0 ? 'odd' : 'even'"
+      >
+        <div class="products__item mt-5 p-5 md:w-1/2">
+          <h3 class="text-1xl font-bold" v-html="item.title"></h3>
+          <p class="mt-3">{{ item.description }}</p>
         </div>
+        <div class="md:w-1/2"></div>
       </div>
-    </section>   
+    </div>
+  </section>
 </template>
 <script>
 export default {
@@ -22,27 +27,24 @@ export default {
     return {
       products: [
         {
-          title: 'Jardines Verticales',
+          title: 'Instalación y mantenimiento de jardines verticales',
           description:
-            'Ex ex laborum sit ipsum dolore. Est elit Lorem aute nisi amet Lorem ea incididunt. Quis occaecat sit et aute sit aliquip eu est laborum excepteur anim Lorem laborum eu.',
+            'Se trata de una instalación vertical cubierta de plantas de distintas especies que no necesitan suelo para crecer. Diseñado con plantas naturales que pueden desarrollarse en barrancos y acantilados o pueden ser artificiales. Una vez instalado el jardín vertical, será necesario labores de mantenimiento como en toda área verde para que se encuentre sano y presente un estado saludable de acuerdo a cada estación del año.',
         },
         {
-          title: 'Jardines Verticales',
+          title: 'Instalación y mantenimiento de <br>arte topiario',
           description:
-            'Ex ex laborum sit ipsum dolore. Est elit Lorem aute nisi amet Lorem ea incididunt. Quis occaecat sit et aute sit aliquip eu est laborum excepteur anim Lorem laborum eu.',
-        },
-        {
-          title: 'Jardines Verticales',
-          description:
-            'Ex ex laborum sit ipsum dolore. Est elit Lorem aute nisi amet Lorem ea incididunt. Quis occaecat sit et aute sit aliquip eu est laborum excepteur anim Lorem laborum eu.',
-        },
-        {
-          title: 'Jardines Verticales',
-          description:
-            'Ex ex laborum sit ipsum dolore. Est elit Lorem aute nisi amet Lorem ea incididunt. Quis occaecat sit et aute sit aliquip eu est laborum excepteur anim Lorem laborum eu.',
+            'El arte de la topiaria consiste en dar formas artísticas a las plantas mediante el recorte típicamente en arbustos y árboles de hoja perenne en formas intrincadas o estilizadas con tijeras de podar. Estas formas pueden representar animales, objetos, espirales, entre otras; es un tipo de escultura viviente. Su principal objetivo es la representación estética pero también es una excelente manera de agregar volumen y perspectiva a su jardín.',
         },
       ],
     }
   },
 }
 </script>
+<style lang="scss" scoped>
+.products__item {
+  &.odd {
+    flex-direction: row-reverse;
+  }
+}
+</style>
